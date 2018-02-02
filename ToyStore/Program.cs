@@ -34,6 +34,8 @@ namespace ToyStore
 
             //Console.WriteLine(toyList[0]); // prints individual elements from list
 
+
+            
             //The Properties and Methods which we will use the most are:
             // .Count
             // .Insert()
@@ -58,7 +60,7 @@ namespace ToyStore
             //{
             //    Console.WriteLine(toy);
             //}
-            
+
             // Another method that we will often use is .Contains() ==> built in method in arrays and lists
             // It returns a Boolean value
 
@@ -89,17 +91,18 @@ namespace ToyStore
             //    {
             //        Console.WriteLine("You broke the code.");
             //    }
-                
+
             //}
             ////shelfStatus.Remove(); // removes the first object from the list
 
 
-            //Create a list. Add five stuffed animals to our list.
-            //Print each stuffed animal in your list.
+
+            ////Create a list. Add five stuffed animals to our list.
+            ////Print each stuffed animal in your list.
 
             string[] animalArray = { "spiderOne", "spiderTwo", "spiderThree", "spiderFour", "spiderFive" };
 
-            List<string> stuffedAnimal = new List<string>() { "dogOne", "dogTwo", "dogThree", "dogFour", "dogFive" };
+            List<string> stuffedAnimal = new List<string>();
 
             stuffedAnimal.Add("bear");
             stuffedAnimal.Add("dolphin");
@@ -107,10 +110,92 @@ namespace ToyStore
             stuffedAnimal.Add("lion");
             stuffedAnimal.Add("unicorn");
 
-            foreach(string animal in stuffedAnimal)
+            foreach (string animal in stuffedAnimal)
             {
                 Console.WriteLine(animal);
             }
+            Console.WriteLine("");
+
+
+            ////PRACTICE
+            // Create a list with the following numbers: 1, 23, 9, 77, 922, 6, 32, 63, 15, 5
+            // Determine whether each of the following values is an element in the list: 23, 77, 15
+
+            int[] statsArray = new int[10];
+
+            List<int> numberList = new List<int>() ;
+
+            numberList.Add(1);
+            numberList.Add(23);
+            numberList.Add(9);
+            numberList.Add(77);
+            numberList.Add(922);
+            numberList.Add(6);
+            numberList.Add(32);
+            numberList.Add(63);
+            numberList.Add(15);
+            numberList.Add(5);
+
+            foreach (int digit in numberList)
+            {
+                Console.WriteLine(digit);
+            }
+            Console.WriteLine("");
+
+
+
+
+            ////Determine whether each of the following values is an element in the list: 23, 77, 15
+
+            int[] checkArray = new int[3];
+
+            List<int> comparedNumbers = new List<int>();
+
+            comparedNumbers.Add(23);
+            comparedNumbers.Add(77);
+            comparedNumbers.Add(15);
+
+            foreach (int same in comparedNumbers)
+            {
+                Console.WriteLine(same);
+            }
+            Console.WriteLine("");
+
+            //int numbersSame = 0;
+            //int numbersExpectation = 3;
+
+
+            //for (int i = 0, i < statsArray.Length; i++) ;
+            //{
+            //    for (int z = 0, z < checkArray.Length; z++)
+            //    {
+            //        if (statsArray[i] == checkArray[z])
+
+            //            numbersSame++;
+
+
+            //    }
+            //    if (numbersSame == numbersExpectation)
+
+            //        Console WriteLine(numbersSame +" numbers were the same.");
+
+            //}
+
+
+            // Remove elements 77, 922, 32, 6
+
+            numberList.Remove(77);
+            numberList.Remove(922);
+            numberList.Remove(32);
+            numberList.Remove(6);
+
+            foreach (int digit in numberList)
+            {
+                Console.WriteLine(digit);
+            }
+            Console.WriteLine("");
+
+
 
 
 
