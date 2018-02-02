@@ -100,30 +100,30 @@ namespace ToyStore
             ////Create a list. Add five stuffed animals to our list.
             ////Print each stuffed animal in your list.
 
-            string[] animalArray = { "spiderOne", "spiderTwo", "spiderThree", "spiderFour", "spiderFive" };
+            //string[] animalArray = { "spiderOne", "spiderTwo", "spiderThree", "spiderFour", "spiderFive" };
 
-            List<string> stuffedAnimal = new List<string>();
+            //List<string> stuffedAnimal = new List<string>();
 
-            stuffedAnimal.Add("bear");
-            stuffedAnimal.Add("dolphin");
-            stuffedAnimal.Add("snake");
-            stuffedAnimal.Add("lion");
-            stuffedAnimal.Add("unicorn");
+            //stuffedAnimal.Add("bear");
+            //stuffedAnimal.Add("dolphin");
+            //stuffedAnimal.Add("snake");
+            //stuffedAnimal.Add("lion");
+            //stuffedAnimal.Add("unicorn");
 
-            foreach (string animal in stuffedAnimal)
-            {
-                Console.WriteLine(animal);
-            }
-            Console.WriteLine("");
+            //foreach (string animal in stuffedAnimal)
+            //{
+            //    Console.WriteLine(animal);
+            //}
+            //Console.WriteLine("");
 
 
             ////PRACTICE
-            // Create a list with the following numbers: 1, 23, 9, 77, 922, 6, 32, 63, 15, 5
+            //// Create a list with the following numbers: 1, 23, 9, 77, 922, 6, 32, 63, 15, 5
             // Determine whether each of the following values is an element in the list: 23, 77, 15
 
-            int[] statsArray = new int[10];
+            //int[] statsArray = new int[10];
 
-            List<int> numberList = new List<int>() ;
+            List<int> numberList = new List<int>(); // or do it this way ==> List<int> numberList = new List<int>() { 1, 23, 9, 77, 922, 6, 32, 63, 15, 5} ;
 
             numberList.Add(1);
             numberList.Add(23);
@@ -144,26 +144,39 @@ namespace ToyStore
 
 
 
+            //Determine whether each of the following values is an element in the list: 23, 77, 15
 
-            ////Determine whether each of the following values is an element in the list: 23, 77, 15
+            //int[] checkArray = new int[3];
 
-            int[] checkArray = new int[3];
+            //List<int> comparedNumbers = new List<int>();
 
-            List<int> comparedNumbers = new List<int>();
+            //comparedNumbers.Add(23);
+            //comparedNumbers.Add(77);
+            //comparedNumbers.Add(15);
 
-            comparedNumbers.Add(23);
-            comparedNumbers.Add(77);
-            comparedNumbers.Add(15);
+            //foreach (int same in comparedNumbers)
+            //{
 
-            foreach (int same in comparedNumbers)
-            {
-                Console.WriteLine(same);
-            }
+            //    Console.WriteLine(same);
+            //}
+
+            // Console.WriteLine("");
+
+            bool comparedNumbers = numberList.Contains(23);
+            Console.WriteLine("Does the number list contain 23?" + comparedNumbers);
             Console.WriteLine("");
 
+            comparedNumbers = numberList.Contains(77);
+            Console.WriteLine("Does the number list contain 77?" + "" + comparedNumbers);
+            Console.WriteLine("");
+
+            comparedNumbers = numberList.Contains(15);
+            Console.WriteLine("Does the number list contain 15?" + "" + comparedNumbers);
+
+
+            ////// ............................DO NOT DO IT THIS WAY
             //int numbersSame = 0;
             //int numbersExpectation = 3;
-
 
             //for (int i = 0, i < statsArray.Length; i++) ;
             //{
@@ -177,12 +190,14 @@ namespace ToyStore
             //    }
             //    if (numbersSame == numbersExpectation)
 
-            //        Console WriteLine(numbersSame +" numbers were the same.");
+            //        Console WriteLine(numbersSame + " numbers were the same."));
+            //    else
+            //        Console.WriteLine("No numbers were the same.");
 
             //}
 
 
-            // Remove elements 77, 922, 32, 6
+            //// Remove elements 77, 922, 32, 6
 
             numberList.Remove(77);
             numberList.Remove(922);
@@ -194,6 +209,20 @@ namespace ToyStore
                 Console.WriteLine(digit);
             }
             Console.WriteLine("");
+
+
+            // Determine whether each of the following values is an element in the list: 23, 77, 15
+
+            comparedNumbers = numberList.Contains(23);
+            Console.WriteLine("Does the number list contain 23?" + comparedNumbers);
+            Console.WriteLine("");
+
+            comparedNumbers = numberList.Contains(77);
+            Console.WriteLine("Does the number list contain 77?" + "" + comparedNumbers);
+            Console.WriteLine("");
+
+            comparedNumbers = numberList.Contains(15);
+            Console.WriteLine("Does the number list contain 15?" + "" + comparedNumbers);
 
 
 
